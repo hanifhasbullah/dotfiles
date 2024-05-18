@@ -106,7 +106,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias vim="nvim"
+alias vim="lvim"
 alias arm="arch -arm64 zsh"
 alias intel="arch -x86_64 zsh"
 alias hh="gh auth switch -u hanifhasbullah && cd ~/.local/scripts && ./git-osxkeychain hanifhasbullah && -"
@@ -163,3 +163,6 @@ eval "$(jenv init -)"
 # ANDROID
 export ANDROID_HOME="/Users/hcd/Library/Android/sdk"
 export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
+
+# LUNARVIM
+export PATH="/Users/hcd/.local/bin:$PATH"

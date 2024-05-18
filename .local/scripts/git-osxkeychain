@@ -1,0 +1,26 @@
+#!/bin/bash
+
+if [[ $# -eq 1 ]]; then
+  NAME="$1"
+else
+  echo "please provide username.."
+  exit 0
+fi
+
+# Define the GitHub host and protocol
+HOST="github.com"
+PROTOCOL="https"
+
+# Run git credential-osxkeychain erase
+echo -e "host=${HOST}\nprotocol=${PROTOCOL}\n" | git credential-osxkeychain erase
+
+echo "Deleted existing cred.."
+# echo -e "\n" | cat -
+
+PASSWD="$(gh auth token)"
+
+echo "Storing ${NAME}.."
+
+echo -e "protocol=https\nhost=github.com\nusername=${NAME}\npassword=${PASSWD}\n" | git credential-osxkeychain store
+
+echo "Done."

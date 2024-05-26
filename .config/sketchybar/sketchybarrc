@@ -50,10 +50,10 @@ sketchybar --default icon.font="Hack Nerd Font:Bold:13.0"  \
 # https://felixkratz.github.io/SketchyBar/config/components#space----associate-mission-control-spaces-with-an-item
 # to indicate active and available mission control spaces
 
-#sketchybar --add item banana left                         \
-#           --set banana icon=                            \
-sketchybar --add item swords left                         \
-           --set swords icon=󰞇                            \
+# sketchybar --add item swords left                         \
+#            --set swords icon=󰞇                            \
+sketchybar --add item banana left                         \
+          --set banana icon=                            \
                         padding_left=5                   \
                         padding_right=10                  \
                         label.drawing=off                 \

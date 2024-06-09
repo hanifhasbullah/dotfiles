@@ -112,16 +112,21 @@ alias intel="arch -x86_64 zsh"
 alias hh="gh auth switch -u hanifhasbullah && cd ~/.local/scripts && ./git-osxkeychain hanifhasbullah && -"
 alias hcd="gh auth switch -u hanifcd && cd ~/.local/scripts && ./git-osxkeychain hanifcd && -"
 alias dev="nvm use && npm run dev"
-alias sync-ip="sh ~/.scripts/sync-public-ip.sh"
+alias sync-ip="sh ~/.local/scripts/sync-public-ip.sh"
 # MSA prod servers
-alias mas1="sshpass -f ~/.ssh/.msaapppass ssh msaapp1"
-alias mas2="sshpass -f ~/.ssh/.msaapppass ssh msaapp2"
-alias mas3="sshpass -f ~/.ssh/.msaapppass ssh msaapp3"
-alias mss1="sshpass -f ~/.ssh/.msaapppass ssh -t msaapp3 ssh msaadmin@10.89.20.142"
-alias mss2="sshpass -f ~/.ssh/.msaapppass ssh -t msaapp3 ssh msaadmin@10.89.20.143"
-alias mws1="sshpass -f ~/.ssh/.msaapppass ssh -t msaapp3 ssh msaadmin@10.88.1.76"
-alias mws2="sshpass -f ~/.ssh/.msaapppass ssh -t msaapp3 ssh msaadmin@10.88.1.77"
-alias mns="sshpass -f ~/.ssh/.msaapppass ssh msanfs"
+alias mas1="TERM=screen sshpass -f ~/.ssh/.msaapppass ssh msaapp1"
+alias mas2="TERM=screen sshpass -f ~/.ssh/.msaapppass ssh msaapp2"
+alias mas3="TERM=screen sshpass -f ~/.ssh/.msaapppass ssh msaapp3"
+alias mss1="TERM=screen sshpass -f ~/.ssh/.msaapppass ssh -t msaapp3 ssh msaadmin@10.89.20.142"
+alias mss2="TERM=screen sshpass -f ~/.ssh/.msaapppass ssh -t msaapp3 ssh msaadmin@10.89.20.143"
+alias mws1="TERM=screen sshpass -f ~/.ssh/.msaapppass ssh -t msaapp3 ssh msaadmin@10.88.1.76"
+alias mws2="TERM=screen sshpass -f ~/.ssh/.msaapppass ssh -t msaapp3 ssh msaadmin@10.88.1.77"
+alias mns="TERM=screen sshpass -f ~/.ssh/.msaapppass ssh msanfs"
+alias mds1="ssh mdbdev1"
+alias mds2="ssh mdbdev2"
+alias mips="ssh mdbintprod"
+alias ssh="TERM=screen ssh"
+alias python="python3"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -137,10 +142,10 @@ export NVM_DIR="$HOME/.nvm"
 # load-nvmrc() {
 #   local node_version="$(nvm version)"
 #   local nvmrc_path="$(nvm_find_nvmrc)"
-#
+
 #   if [ -n "$nvmrc_path" ]; then
 #     local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
-#
+
 #     if [ "$nvmrc_node_version" = "N/A" ]; then
 #       nvm install
 #     elif [ "$nvmrc_node_version" != "$node_version" ]; then
@@ -151,9 +156,9 @@ export NVM_DIR="$HOME/.nvm"
 #     nvm use default
 #   fi
 # }
-#
+
 # add-zsh-hook chpwd load-nvmrc
-#
+
 # load-nvmrc
 
 # JENV
